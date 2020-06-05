@@ -32,7 +32,7 @@ def train_and_validate(net,criterion, optimizer, scheduler, dataloader,device,ep
     history = {'train':{'epoch':[], 'loss' : [] , 'acc':[]},
                'val'  :{'epoch':[], 'loss' : [] , 'acc':[]}}
 
-    best_acc = 0.98
+    best_acc = 0.70
     best_loss = 10000000000
     start = time.time()
     for epoch in range(epochs):
@@ -162,14 +162,6 @@ def main():
     import torchvision.transforms as transforms
     from my_transforms import RandomHorizontalFlip,RandomVerticalFlip,ColorJitter,GrayScale,Resize,ToTensor
     train_transforms = transforms.Compose([
-        #Data Augmentations
-        RandomHorizontalFlip(),
-        RandomVerticalFlip(),
-        ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.5),
-        #shear
-        #rotation
-        #scale
-        #transformations to fit in Network
         GrayScale(),
         Resize(img_size),
         ToTensor(),
@@ -209,11 +201,7 @@ def main():
     ## option 2.
     scheduler = ReduceLROnPlateau(optimizer, 'min', patience=3)
 
-    # # set criterion
-    # if model.n_classes > 1:
-    #     criterion = nn.CrossEntropyLoss()
-    # else:
-    #     criterion = nn.BCEWithLogitsLoss()
+
     criterion = nn.BCEWithLogitsLoss()
 
     train_and_validate(net=model,criterion=criterion,optimizer=optimizer,dataloader=dataloader,device=device,epochs=args.epochs, scheduler=scheduler,load_model=checkpoint_path)
