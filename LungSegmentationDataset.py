@@ -32,8 +32,7 @@ class LungSegDataset(Dataset): # inherit from torch.utils.data.Dataset
         self.train_image_file = [fName for fName in image_file if "CHNCXR" in fName]
         self.train_image_idx = sorted([int(fName.split("_")[1]) for fName in self.train_image_file])
 
-        self.eval_image_file = [fName for fName in image_file if "MCUCXR" in fName]
-        self.eval_image_idx = sorted([int(fName.split("_")[1]) for fName in self.eval_image_file])
+        
 
         # target
         self.mask_path = os.path.join(self.root_dir,'masks')
@@ -41,27 +40,26 @@ class LungSegDataset(Dataset): # inherit from torch.utils.data.Dataset
         self.train_mask_file = [fName for fName in mask_file if "CHNCXR" in fName]
         self.train_mask_idx = sorted([int(fName.split("_")[1]) for fName in self.train_mask_file])
 
-        self.eval_mask_file = [fName for fName in mask_file if "MCUCXR" in fName]
-        self.eval_mask_idx = sorted([int(fName.split("_")[1]) for fName in self.eval_mask_file])
+
 
         # train/ val / test
         # for train set, we use CHN
         # for test and validation set, we use MCU
-        self.train_idx = [idx for idx in self.train_image_idx if idx in self.train_mask_idx]
-        self.eval_idx = [idx for idx in self.eval_image_idx if idx in self.eval_mask_idx]
-        self.val_idx = self.eval_idx[:int(0.5*len(self.eval_idx))]
-        self.test_idx = self.eval_idx[int(0.5*len(self.eval_idx)):]
+        self.all_idx = [idx for idx in self.train_image_idx if idx in self.train_mask_idx]
+        
+        self.train_idx = self.all_idx[:int(0.9*len(self.all_idx))]
+        self.val_idx = self.all_idx[int(0.1*len(self.all_idx)):]
 
 
 
 
         self.data_file = {"train"  : {"image":self.train_image_file , "mask": self.train_mask_file},
-                           "val"   : {"image":self.eval_image_file  , "mask": self.eval_mask_file },
-                           "test"  : {"image":self.eval_image_file  , "mask": self.eval_mask_file}}
+                           "val"   : {"image":self.train_image_file  , "mask": self.train_mask_file},
+                           "test"  : {"image":self.train_image_file  , "mask": self.train_mask_file}}
 
         self.data_idx ={"train" : self.train_idx,
                         "val"   : self.val_idx,
-                        "test"  : self.test_idx}
+                        "test"  : self.val_idx}
 
 
 
