@@ -146,8 +146,8 @@ def main():
 
     # set model
     model = UNet(n_channels=1, n_classes=1)
-    model = nn.DataParallel(model) #to use 2 gpus
-    model.to(device)
+    #model = nn.DataParallel(model) #to use 2 gpus
+    #model.to(device)
     if len(args.gpu) > 1: # if multi-gpu
         model = torch.nn.DataParallel(model)
 
