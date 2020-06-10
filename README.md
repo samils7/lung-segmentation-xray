@@ -13,13 +13,6 @@ Download Dataset from [Chest Xray Masks and Labels Pulmonary Chest X-Ray Defect 
       /data/Lung Segmentation/masks
 ```
 
-## U-Net: Convolutional Networks for Biomedical Image Segmentation 
-Writers: Olaf Ronneberger, Philipp Fischer, and Thomas Brox <br>
-Medical Image Computing and Computer-Assisted Intervention (MICCAI), Springer, LNCS, Vol.9351: 234--241, 2015, available at https://arxiv.org/pdf/1505.04597.pdf <br>
-<br>
-U-Net is a convolutional neural network architecture for fast and precise segmentation of images.<br>
-<br>
-
 
 ## U-Net Architecture
 ![u-net-architecture](./u-net-architecture.png)<br>
@@ -63,15 +56,6 @@ At the final layer a **1x1 convolution** is used to map each 64 componet feature
 <br>
 Important trick: select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size
 
-
-## Data Augmentations
-- shift
-- rotation
-- random elastic deformations:<br>
-  smooth deformations using random displacement vectors on a coarse 3 by 3 grid.<br> 
-  The displacements are sampled from a Gaussian distribution with 10 pixels standard deviation.<br>
-  Per-pixel displacements are then computed using bicubic interpolation.![ElasticDeform](./ElasticDeformation.png)
-- Drop-out
 
 
 ## Loss Function
