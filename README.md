@@ -18,7 +18,6 @@ Download Dataset from [Chest Xray Masks and Labels Pulmonary Chest X-Ray Defect 
 ![u-net-architecture](./u-net-architecture.png)<br>
 U-net architecture (example for 32x32 pixels in the lowest resolution). Each blue box corresponds to a multi-channel feature map. The number of channels is denoted on top of the box. The x-y-size is provided at the lower left edge of the box. White boxes represent copied feature maps. The arrows denote the different operations.<br>
 Note that there is no dense layer.So images of different sizes can be used as input.<br>
-![UnetExample](./UnetExample.png)
 
 The U-Net combines **the location information from the downsampling** with **the contextual information in the upsampling** path to finally obtain a general information combining **localisation** and **context**, which is necessary to predict a good segmentation map.<br>
 
@@ -38,24 +37,6 @@ Sequence of **up-convolutions** and **concatenation(skip-connection)** with high
 
 ### Final Bottleneck Layer
 At the final layer a **1x1 convolution** is used to map each 64 componet feature vector to the desired number of classes.<br>
-
-
-## Challenges
-- Very few annotated Very few annotated images available (approx. 30 per applications)
-- **Touching objects** of the same class<br>
-
-
-## Contributions
-- U-net learns **segmentation** in an **end-to-end** setting (beats the prior best method, a sliding-window CNN, with large margin.) 
-- **excessive data augmentation** by applying **elastic deformations** which used to be the most common variation in tissue and realistic deformations can be simulated efficiently.
-- Ensure Separation of Touching Objects
-![TouchingObject](./TouchObjects.png)
-- The use of **a weighted loss**, where the separating background labels between **touching cells** of the same class
-- Overlap-tile strategy for seamless segmentation of arbitrary large images
-![overlap_strategy](./Overlap-tile-strategy-for-seamless-segmentation-of-arbitrary-large-images-here.png)
-<br>
-Important trick: select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size
-
 
 
 ## Loss Function
