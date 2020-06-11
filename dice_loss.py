@@ -1,12 +1,13 @@
 import torch
 
+
 class DiceCoefficient(torch.autograd.Function):
     """
     Dice coefficient for individual examples
         Dice coefficient = 2 * |X n Y| / (|X| + |Y|)
                          = 1 / ( 1/Precision + 1/Recall)
     """
-    def forward(self, input , target):
+    def forward(self, input, target):
         self.save_for_backward(input, target)
         eps = 1e-10
         self.inter = torch.dot(input.view(-1), target.view(-1)) # inter = |X n Y|
@@ -25,6 +26,7 @@ class DiceCoefficient(torch.autograd.Function):
             grad_target = None
 
         return grad_input, grad_target
+
 
 def dice_coefficient(input, target):
     """Dice coeff for batches"""
