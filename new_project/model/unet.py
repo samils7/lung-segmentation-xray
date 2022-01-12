@@ -26,11 +26,12 @@ class UNet(nn.Module):
         the desired number of classes
     """
 
-    def __init__(self, n_channels, n_classes, bilinear=False):
+    def __init__(self, n_channels, n_classes, bilinear=False, device="cpu"):
         super(UNet, self).__init__()
         self.n_channels = n_channels
         self.n_classes = n_classes
         self.bilinear = bilinear
+        self.device = device
 
         self.in_conv = UNetConvBlock(self.n_channels, 64)
         self.Down1 = Down(64, 128)
@@ -42,6 +43,8 @@ class UNet(nn.Module):
         self.Up3 = Up(128 + 128, 64, self.bilinear)
         self.Up4 = Up(64 + 64, 64, self.bilinear)
         self.out_conv = OutConv(64, n_classes)
+
+        self.to(device)
 
     def forward(self, x):
         x1 = self.in_conv(x)

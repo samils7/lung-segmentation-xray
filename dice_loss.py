@@ -40,3 +40,7 @@ def dice_coefficient(input, target):
 
     n_data = len(input)
     return s / n_data
+
+
+class DiceLoss:
+    pass
