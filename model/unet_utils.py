@@ -2,9 +2,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
 class UNetConvBlock(nn.Module):
     " [conv -> BN -> ReLU] -> [conv -> BN -> ReLU]"
-    def __init__(self, in_channels, out_channels, kernel_size = 3 , padding = True):
+
+    def __init__(self, in_channels, out_channels, kernel_size=3, padding=True):
         """
 
         :param in_channels:
@@ -19,7 +21,7 @@ class UNetConvBlock(nn.Module):
         super().__init__()
         self.double_conv = nn.Sequential(
             # Usually Conv -> BatchNormalization -> Activation
-            nn.Conv2d(in_channels , out_channels , kernel_size= kernel_size , padding = int(padding)),
+            nn.Conv2d(in_channels, out_channels, kernel_size=kernel_size, padding=int(padding)),
             nn.BatchNorm2d(out_channels),
             nn.ReLU(inplace=True),
 
@@ -27,7 +29,7 @@ class UNetConvBlock(nn.Module):
             nn.BatchNorm2d(out_channels),
             nn.ReLU(inplace=True))
 
-    def forward(self,inp):
+    def forward(self, inp):
         return self.double_conv(inp)
 
 
@@ -38,15 +40,17 @@ class Down(nn.Module):
         - 3X3 Conv2D -> BN -> ReLU
         - MaxPooling
     """
-    def __init__(self, in_channels , out_channels):
+
+    def __init__(self, in_channels, out_channels):
         super().__init__()
         self.maxpool_conv = nn.Sequential(
             nn.MaxPool2d(2),
-            UNetConvBlock(in_channels,out_channels)
+            UNetConvBlock(in_channels, out_channels)
         )
 
-    def forward(self,x):
+    def forward(self, x):
         return self.maxpool_conv(x)
+
 
 class Up(nn.Module):
     """
@@ -64,26 +68,27 @@ class Up(nn.Module):
         The benefit of using upsampling is that it has no parameters and if you include the 1x1 convolution,
         it will still have less parameters than the transposed convolution
     """
-    def __init__(self,in_channels , out_channels , bilinear = False):
-        super(Up,self).__init__()
 
-        if bilinear: # use the normal conv to reduce the number of channels
-            self.up = nn.Upsample(scale_factor=2, mode= 'bilinear', align_corners = True)
-        else: # use Transpose convolution (the one that official UNet used)
-            self.up = nn.ConvTranspose2d(in_channels//2 , in_channels // 2, kernel_size = 2,stride=2 )
+    def __init__(self, in_channels, out_channels, bilinear=False):
+        super(Up, self).__init__()
 
-        self.conv = UNetConvBlock(in_channels,out_channels)
+        if bilinear:  # use the normal conv to reduce the number of channels
+            self.up = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
+        else:  # use Transpose convolution (the one that official UNet used)
+            self.up = nn.ConvTranspose2d(in_channels // 2, in_channels // 2, kernel_size=2, stride=2)
 
-    def forward(self,x1,x2):
+        self.conv = UNetConvBlock(in_channels, out_channels)
+
+    def forward(self, x1, x2):
         # input dim is CHW
         x1 = self.up(x1)
 
         diffY = torch.tensor([x2.size()[2] - x1.size()[2]])
         diffX = torch.tensor([x2.size()[3] - x1.size()[3]])
 
-        x1 = F.pad(x1 , [diffX // 2, diffX - diffX // 2,
-                         diffY // 2, diffY - diffY // 2])
-        x = torch.cat([x2, x1] , dim = 1)
+        x1 = F.pad(x1, [diffX // 2, diffX - diffX // 2,
+                        diffY // 2, diffY - diffY // 2])
+        x = torch.cat([x2, x1], dim=1)
         out = self.conv(x)
         return out
 
