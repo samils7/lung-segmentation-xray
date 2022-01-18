@@ -8,7 +8,7 @@ from torch import optim
 
 from model.unet import UNet
 from get_dataloaders import get_dataloaders
-from DiceLoss import DiceLoss
+from DiceLoss import dice_loss
 from utils import Logger
 from train import train, eval
 
@@ -26,12 +26,12 @@ def main(args, device):
 
     dataloader = get_dataloaders(args)
     optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-5)
-    scheduler = ReduceLROnPlateau(optimizer, 'min', verbose=True, patience=5)
+    scheduler = ReduceLROnPlateau(optimizer, 'min', verbose=True, patience=3)
 
     if args.criterion == "BCE":
         criterion = nn.BCEWithLogitsLoss()
     elif args.criterion == "dice":
-        criterion = DiceLoss()
+        criterion = dice_loss
     else:
         raise NotImplementedError(f"{args.criterion} is not implemented")
 
@@ -50,16 +50,16 @@ if __name__ == "__main__":
 
     # set your environment
     parser.add_argument('--gpu', type=str, default='0')
-    parser.add_argument('--n_workers', type=int, default=6, help="The number of workers for dataloader")
+    parser.add_argument('--n_workers', type=int, default=12, help="The number of workers for dataloader")
 
     # arguments for training
     parser.add_argument('--img_size', type=int, default=512)
     parser.add_argument('--epochs', type=int, default=100)
-    parser.add_argument('--batch_size', type=int, default=16)
+    parser.add_argument('--batch_size', type=int, default=12)
     parser.add_argument('--lr', type=float, default=0.1)
 
     parser.add_argument('--aug_method', type=str, default='gamma', choices=['gamma', 'no_gamma'])
-    parser.add_argument('--criterion', type=str, default='BCE', choices=['BCE', 'dice'])
+    parser.add_argument('--criterion', type=str, default='dice', choices=['BCE', 'dice'])
 
     parser.add_argument('--load_model', type=str, default=None, help='.pth file path to load model')
 

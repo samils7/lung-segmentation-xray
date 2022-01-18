@@ -1,8 +1,9 @@
+from numpy import dtype
 import torch
 from torch.utils.data import Dataset
 import os
 from PIL import Image
-
+import numpy as np
 
 class chn_dataset(Dataset):  # inherit from torch.utils.data.Dataset
     """China dataset."""
@@ -65,6 +66,7 @@ class chn_dataset(Dataset):  # inherit from torch.utils.data.Dataset
 
         mask_path = os.path.join(self.mask_path, mask_fName)
         mask = Image.open(mask_path)  # PIL Image
+        mask = Image.fromarray(np.array(mask, dtype=bool))
 
         sample = {'image': img, 'mask': mask}
 
@@ -137,6 +139,7 @@ class mcu_dataset(Dataset):
 
         mask_path = os.path.join(self.mask_path, mask_fName)
         mask = Image.open(mask_path)  # PIL Image
+        mask = Image.fromarray(np.array(mask, dtype=bool))
 
         sample = {'image': img, 'mask': mask}
 

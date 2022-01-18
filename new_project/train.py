@@ -10,7 +10,7 @@ def train(model, criterion, optimizer, scheduler, dataloader, device, epochs, lo
 
     best_iou = -1.0
     start = time.time()
-    for epoch in tqdm(range(start_epoch, epochs + start_epoch)):
+    for epoch in tqdm(range(start_epoch, epochs + start_epoch), ncols=0):
         logger("-" * 30)
         logger(f"Epoch {epoch + 1}/{epochs}")
         since = time.time()
@@ -27,11 +27,11 @@ def train(model, criterion, optimizer, scheduler, dataloader, device, epochs, lo
             running_iou = 0.0
             dataset_size = 0
             """Iterate over data"""
-            for dset in tqdm(dataloader[phase], disable=True):
-                for batch_idx, sample in enumerate(tqdm(dataloader[phase][dset])):
+            for dset in dataloader[phase]:
+                for batch_idx, sample in enumerate(tqdm(dataloader[phase][dset], leave=False, ncols=0)):
                     imgs, true_masks = sample['image'], sample['mask']
                     imgs = imgs.to(device=device, dtype=torch.float32)
-                    true_masks = true_masks.to(device=device, dtype=torch.float32)
+                    true_masks = true_masks.to(device=device, dtype=torch.float32).round()
 
                     optimizer.zero_grad()
 
@@ -49,11 +49,9 @@ def train(model, criterion, optimizer, scheduler, dataloader, device, epochs, lo
                     """ statistics """
                     dataset_size += imgs.size(0)
                     running_loss += loss.item() * imgs.size(0)
-                    pred = torch.sigmoid(masks_pred).round()
+                    pred = torch.sigmoid(masks_pred).round().detach()
                     running_correct += (pred == true_masks).float().mean().item() * imgs.size(0)
-                    running_iou += (torch.logical_and(pred, true_masks).sum() / torch.logical_or(pred,
-                                                                                                 true_masks).sum()) * imgs.size(
-                        0)
+                    running_iou += ((torch.logical_and(pred, true_masks).sum() / torch.logical_or(pred, true_masks).sum()) * imgs.size(0)).item()
 
             """ statistics """
             epoch_loss = running_loss / dataset_size
@@ -80,14 +78,16 @@ def train(model, criterion, optimizer, scheduler, dataloader, device, epochs, lo
         time_elapsed = time.time() - since
         logger("One Epoch Complete in {:.0f}m {:.0f}s".format(time_elapsed // 60, time_elapsed % 60))
 
-        time_elapsed = time.time() - start
-        minute, sec = time_elapsed // 60, time_elapsed % 60
-        logger("Total Training time {:.0f}min {:.0f}sec".format(minute, sec))
+    time_elapsed = time.time() - start
+    minute, sec = time_elapsed // 60, time_elapsed % 60
+    logger("Total Training time {:.0f}min {:.0f}sec".format(minute, sec))
 
-        final_wts = copy.deepcopy(model.state_dict())
-        torch.save({'epoch': epoch,
-                    'model_state_dict': final_wts
-                    }, f'{logger.path}/last_checkpoint.pt')
+    final_wts = copy.deepcopy(model.state_dict())
+    torch.save({'epoch': epoch,
+                'model_state_dict': final_wts
+                }, f'{logger.path}/last_checkpoint.pt')
+
+    logger.write(history)
 
 
 def eval(model, criterion, dataloader, device, logger):
@@ -98,8 +98,8 @@ def eval(model, criterion, dataloader, device, logger):
     running_iou = 0.0
     dataset_size = 0
     """Iterate over data"""
-    for dset in tqdm(dataloader['val'], disable=True):
-        for batch_idx, sample in enumerate(tqdm(dataloader['val'][dset])):
+    for dset in dataloader['val']:
+        for batch_idx, sample in enumerate(tqdm(dataloader['val'][dset], ncols=0)):
             imgs, true_masks = sample['image'], sample['mask']
             imgs = imgs.to(device=device, dtype=torch.float32)
             true_masks = true_masks.to(device=device, dtype=torch.float32)
@@ -114,9 +114,7 @@ def eval(model, criterion, dataloader, device, logger):
             running_loss += loss.item() * imgs.size(0)
             pred = torch.sigmoid(masks_pred).round()
             running_correct += (pred == true_masks).float().mean().item() * imgs.size(0)
-            running_iou += (torch.logical_and(pred, true_masks).sum() / torch.logical_or(pred,
-                                                                                         true_masks).sum()) * imgs.size(
-                0)
+            running_iou += (torch.logical_and(pred, true_masks).sum() / torch.logical_or(pred, true_masks).sum()) * imgs.size(0)
 
     """ statistics """
     epoch_loss = running_loss / dataset_size
