@@ -1,810 +1,879 @@
 args: Namespace(gpu='0', n_workers=12, img_size=512, epochs=100, batch_size=12, lr=0.1, aug_method='gamma', criterion='dice', load_model=None)
 ------------------------------
 Epoch 1/100
-train Loss 0.88921
-train Acc 0.30 IoU 0.26
+train Loss 0.75883
+train Acc 0.68 IoU 0.39
 ----------
-val Loss 0.78316
-val Acc 0.27 IoU 0.27
+val Loss 0.72777
+val Acc 0.77 IoU 0.49
 Achieved best result! save checkpoint.
-val Loss 0.78316
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 0.72777
+val Acc 0.77 IoU 0.49
+One Epoch Complete in 0m 58s
 ------------------------------
 Epoch 2/100
-train Loss 0.65890
-train Acc 0.25 IoU 0.25
+train Loss 0.66337
+train Acc 0.87 IoU 0.62
 ----------
-val Loss 1.00296
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 1.07901
+val Acc 0.73 IoU 0.00
+One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 3/100
-train Loss 0.64769
-train Acc 0.37 IoU 0.31
+train Loss 0.64754
+train Acc 0.89 IoU 0.65
 ----------
-val Loss 0.69859
-val Acc 0.56 IoU 0.37
-Achieved best result! save checkpoint.
-val Loss 0.69859
-val Acc 0.56 IoU 0.37
-One Epoch Complete in 0m 57s
+val Loss 1.07048
+val Acc 0.73 IoU 0.00
+One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 4/100
-train Loss 0.65766
-train Acc 0.27 IoU 0.26
+train Loss 0.63466
+train Acc 0.91 IoU 0.69
 ----------
-val Loss 1.08729
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
-------------------------------
-Epoch 5/100
-train Loss 0.65898
-train Acc 0.41 IoU 0.32
-----------
-val Loss 0.95814
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
-------------------------------
-Epoch 6/100
-train Loss 0.63840
-train Acc 0.32 IoU 0.29
-----------
-val Loss 0.72119
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
-------------------------------
-Epoch 7/100
-train Loss 0.65239
-train Acc 0.35 IoU 0.30
-----------
-val Loss 1.09741
+val Loss 1.06285
 val Acc 0.73 IoU 0.00
 One Epoch Complete in 0m 57s
 ------------------------------
-Epoch 8/100
-train Loss 0.63885
-train Acc 0.28 IoU 0.27
+Epoch 5/100
+train Loss 0.62176
+train Acc 0.92 IoU 0.72
 ----------
-val Loss 0.67219
-val Acc 0.27 IoU 0.27
+val Loss 1.01882
+val Acc 0.73 IoU 0.00
+One Epoch Complete in 0m 57s
+------------------------------
+Epoch 6/100
+train Loss 0.61763
+train Acc 0.92 IoU 0.74
+----------
+val Loss 1.00267
+val Acc 0.73 IoU 0.00
+One Epoch Complete in 0m 57s
+------------------------------
+Epoch 7/100
+train Loss 0.61057
+train Acc 0.93 IoU 0.76
+----------
+val Loss 0.61309
+val Acc 0.93 IoU 0.75
+Achieved best result! save checkpoint.
+val Loss 0.61309
+val Acc 0.93 IoU 0.75
+One Epoch Complete in 0m 57s
+------------------------------
+Epoch 8/100
+train Loss 0.60862
+train Acc 0.93 IoU 0.76
+----------
+val Loss 0.92292
+val Acc 0.73 IoU 0.00
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 9/100
-train Loss 0.63967
-train Acc 0.34 IoU 0.30
+train Loss 0.60214
+train Acc 0.94 IoU 0.78
 ----------
-val Loss 0.63024
-val Acc 0.27 IoU 0.27
+val Loss 0.67417
+val Acc 0.88 IoU 0.55
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 10/100
-train Loss 0.62844
-train Acc 0.35 IoU 0.30
+train Loss 0.59460
+train Acc 0.95 IoU 0.80
 ----------
-val Loss 0.64049
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
-------------------------------
-Epoch 11/100
-train Loss 0.61367
-train Acc 0.25 IoU 0.25
-----------
-val Loss 1.02868
-val Acc 0.27 IoU 0.27
+val Loss 0.86098
+val Acc 0.75 IoU 0.24
 One Epoch Complete in 0m 56s
 ------------------------------
-Epoch 12/100
-train Loss 0.61476
-train Acc 0.25 IoU 0.25
+Epoch 11/100
+train Loss 0.59643
+train Acc 0.94 IoU 0.79
 ----------
-val Loss 1.04285
-val Acc 0.27 IoU 0.27
+val Loss 0.61011
+val Acc 0.93 IoU 0.76
+Achieved best result! save checkpoint.
+val Loss 0.61011
+val Acc 0.93 IoU 0.76
+One Epoch Complete in 0m 57s
+------------------------------
+Epoch 12/100
+train Loss 0.58989
+train Acc 0.95 IoU 0.82
+----------
+val Loss 0.61191
+val Acc 0.92 IoU 0.75
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 13/100
-train Loss 0.60552
-train Acc 0.30 IoU 0.28
+train Loss 0.59266
+train Acc 0.95 IoU 0.81
 ----------
-val Loss 0.68790
-val Acc 0.27 IoU 0.27
+val Loss 0.66953
+val Acc 0.87 IoU 0.58
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 14/100
-train Loss 0.59523
-train Acc 0.25 IoU 0.25
+train Loss 0.59076
+train Acc 0.95 IoU 0.81
 ----------
-val Loss 0.59833
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.59485
+val Acc 0.94 IoU 0.81
+Achieved best result! save checkpoint.
+val Loss 0.59485
+val Acc 0.94 IoU 0.81
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 15/100
-train Loss 0.59350
-train Acc 0.25 IoU 0.25
+train Loss 0.58796
+train Acc 0.95 IoU 0.82
 ----------
-val Loss 0.60187
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 55s
+val Loss 0.60681
+val Acc 0.93 IoU 0.78
+One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 16/100
-train Loss 0.59301
-train Acc 0.25 IoU 0.25
+train Loss 0.58931
+train Acc 0.95 IoU 0.82
 ----------
-val Loss 0.61417
-val Acc 0.27 IoU 0.27
+val Loss 0.60816
+val Acc 0.92 IoU 0.76
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 17/100
-train Loss 0.59133
-train Acc 0.25 IoU 0.25
+train Loss 0.58698
+train Acc 0.95 IoU 0.83
 ----------
-val Loss 0.60186
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 0.72613
+val Acc 0.72 IoU 0.48
+One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 18/100
-train Loss 0.59057
-train Acc 0.25 IoU 0.25
+train Loss 0.58375
+train Acc 0.96 IoU 0.84
 ----------
-val Loss 0.60550
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.60526
+val Acc 0.93 IoU 0.77
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 19/100
-train Loss 0.59123
-train Acc 0.25 IoU 0.25
+train Loss 0.58412
+train Acc 0.96 IoU 0.84
 ----------
-val Loss 0.59227
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.60327
+val Acc 0.93 IoU 0.78
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 20/100
-train Loss 0.58727
-train Acc 0.25 IoU 0.25
+train Loss 0.58139
+train Acc 0.96 IoU 0.85
 ----------
-val Loss 0.59221
-val Acc 0.27 IoU 0.27
+val Loss 0.59722
+val Acc 0.93 IoU 0.80
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 21/100
-train Loss 0.58686
-train Acc 0.25 IoU 0.25
+train Loss 0.57862
+train Acc 0.96 IoU 0.86
 ----------
-val Loss 0.59214
-val Acc 0.27 IoU 0.27
+val Loss 0.59619
+val Acc 0.94 IoU 0.80
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 22/100
-train Loss 0.58688
-train Acc 0.25 IoU 0.25
+train Loss 0.57650
+train Acc 0.96 IoU 0.86
 ----------
-val Loss 0.59104
-val Acc 0.27 IoU 0.27
+val Loss 0.59762
+val Acc 0.93 IoU 0.80
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 23/100
-train Loss 0.58605
-train Acc 0.25 IoU 0.25
+train Loss 0.57588
+train Acc 0.96 IoU 0.87
 ----------
-val Loss 0.59326
-val Acc 0.27 IoU 0.27
+val Loss 0.58187
+val Acc 0.96 IoU 0.85
+Achieved best result! save checkpoint.
+val Loss 0.58187
+val Acc 0.96 IoU 0.85
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 24/100
-train Loss 0.58622
-train Acc 0.25 IoU 0.25
+train Loss 0.57403
+train Acc 0.97 IoU 0.87
 ----------
-val Loss 0.59157
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 0.58159
+val Acc 0.96 IoU 0.86
+Achieved best result! save checkpoint.
+val Loss 0.58159
+val Acc 0.96 IoU 0.86
+One Epoch Complete in 0m 58s
 ------------------------------
 Epoch 25/100
-train Loss 0.58552
-train Acc 0.25 IoU 0.25
+train Loss 0.57356
+train Acc 0.97 IoU 0.87
 ----------
-val Loss 0.59196
-val Acc 0.27 IoU 0.27
+val Loss 0.58143
+val Acc 0.96 IoU 0.86
+Achieved best result! save checkpoint.
+val Loss 0.58143
+val Acc 0.96 IoU 0.86
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 26/100
-train Loss 0.58545
-train Acc 0.25 IoU 0.25
+train Loss 0.57278
+train Acc 0.97 IoU 0.88
 ----------
-val Loss 0.59264
-val Acc 0.27 IoU 0.27
+val Loss 0.58021
+val Acc 0.96 IoU 0.86
+Achieved best result! save checkpoint.
+val Loss 0.58021
+val Acc 0.96 IoU 0.86
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 27/100
-train Loss 0.58463
-train Acc 0.25 IoU 0.25
+train Loss 0.57252
+train Acc 0.97 IoU 0.88
 ----------
-val Loss 0.59102
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.58058
+val Acc 0.96 IoU 0.86
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 28/100
-train Loss 0.58449
-train Acc 0.25 IoU 0.25
+train Loss 0.57243
+train Acc 0.97 IoU 0.88
 ----------
-val Loss 0.59140
-val Acc 0.27 IoU 0.27
+val Loss 0.58005
+val Acc 0.96 IoU 0.86
+Achieved best result! save checkpoint.
+val Loss 0.58005
+val Acc 0.96 IoU 0.86
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 29/100
-train Loss 0.58457
-train Acc 0.25 IoU 0.25
+train Loss 0.57187
+train Acc 0.97 IoU 0.88
 ----------
-val Loss 0.59147
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57964
+val Acc 0.96 IoU 0.86
+Achieved best result! save checkpoint.
+val Loss 0.57964
+val Acc 0.96 IoU 0.86
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 30/100
-train Loss 0.58487
-train Acc 0.25 IoU 0.25
+train Loss 0.57147
+train Acc 0.97 IoU 0.88
 ----------
-val Loss 0.59052
-val Acc 0.27 IoU 0.27
+val Loss 0.57925
+val Acc 0.96 IoU 0.87
+Achieved best result! save checkpoint.
+val Loss 0.57925
+val Acc 0.96 IoU 0.87
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 31/100
-train Loss 0.58454
-train Acc 0.25 IoU 0.25
+train Loss 0.57114
+train Acc 0.97 IoU 0.88
 ----------
-val Loss 0.59119
-val Acc 0.27 IoU 0.27
+val Loss 0.57961
+val Acc 0.96 IoU 0.86
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 32/100
-train Loss 0.58462
-train Acc 0.25 IoU 0.25
+train Loss 0.57054
+train Acc 0.97 IoU 0.88
 ----------
-val Loss 0.59247
-val Acc 0.27 IoU 0.27
+val Loss 0.57916
+val Acc 0.96 IoU 0.86
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 33/100
-train Loss 0.58466
-train Acc 0.25 IoU 0.25
+train Loss 0.56980
+train Acc 0.97 IoU 0.89
 ----------
-val Loss 0.59052
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57885
+val Acc 0.96 IoU 0.87
+Achieved best result! save checkpoint.
+val Loss 0.57885
+val Acc 0.96 IoU 0.87
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 34/100
-train Loss 0.58484
-train Acc 0.25 IoU 0.25
+train Loss 0.56970
+train Acc 0.97 IoU 0.89
 ----------
-val Loss 0.59008
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57886
+val Acc 0.96 IoU 0.87
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 35/100
-train Loss 0.58471
-train Acc 0.25 IoU 0.25
+train Loss 0.56885
+train Acc 0.97 IoU 0.89
 ----------
-val Loss 0.59145
-val Acc 0.27 IoU 0.27
+val Loss 0.57806
+val Acc 0.96 IoU 0.87
+Achieved best result! save checkpoint.
+val Loss 0.57806
+val Acc 0.96 IoU 0.87
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 36/100
-train Loss 0.58457
-train Acc 0.25 IoU 0.25
+train Loss 0.56853
+train Acc 0.97 IoU 0.89
 ----------
-val Loss 0.59123
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57776
+val Acc 0.96 IoU 0.87
+Achieved best result! save checkpoint.
+val Loss 0.57776
+val Acc 0.96 IoU 0.87
+One Epoch Complete in 0m 58s
 ------------------------------
 Epoch 37/100
-train Loss 0.58454
-train Acc 0.25 IoU 0.25
+train Loss 0.56830
+train Acc 0.97 IoU 0.89
 ----------
-val Loss 0.59011
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
-------------------------------
-Epoch 38/100
-train Loss 0.58425
-train Acc 0.25 IoU 0.25
-----------
-val Loss 0.59127
-val Acc 0.27 IoU 0.27
+val Loss 0.57650
+val Acc 0.96 IoU 0.87
+Achieved best result! save checkpoint.
+val Loss 0.57650
+val Acc 0.96 IoU 0.87
 One Epoch Complete in 0m 57s
 ------------------------------
-Epoch 39/100
-train Loss 0.58441
-train Acc 0.25 IoU 0.25
+Epoch 38/100
+train Loss 0.56777
+train Acc 0.97 IoU 0.89
 ----------
-val Loss 0.59158
-val Acc 0.27 IoU 0.27
+val Loss 0.57603
+val Acc 0.96 IoU 0.88
+Achieved best result! save checkpoint.
+val Loss 0.57603
+val Acc 0.96 IoU 0.88
+One Epoch Complete in 0m 56s
+------------------------------
+Epoch 39/100
+train Loss 0.56727
+train Acc 0.97 IoU 0.90
+----------
+val Loss 0.57702
+val Acc 0.96 IoU 0.87
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 40/100
-train Loss 0.58431
-train Acc 0.25 IoU 0.25
+train Loss 0.56698
+train Acc 0.97 IoU 0.90
 ----------
-val Loss 0.58998
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57497
+val Acc 0.97 IoU 0.88
+Achieved best result! save checkpoint.
+val Loss 0.57497
+val Acc 0.97 IoU 0.88
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 41/100
-train Loss 0.58441
-train Acc 0.25 IoU 0.25
+train Loss 0.56656
+train Acc 0.97 IoU 0.90
 ----------
-val Loss 0.59060
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57587
+val Acc 0.96 IoU 0.88
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 42/100
-train Loss 0.58490
-train Acc 0.25 IoU 0.25
+train Loss 0.56607
+train Acc 0.97 IoU 0.90
 ----------
-val Loss 0.59196
-val Acc 0.27 IoU 0.27
+val Loss 0.57310
+val Acc 0.97 IoU 0.89
+Achieved best result! save checkpoint.
+val Loss 0.57310
+val Acc 0.97 IoU 0.89
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 43/100
-train Loss 0.58430
-train Acc 0.25 IoU 0.25
+train Loss 0.56573
+train Acc 0.97 IoU 0.90
 ----------
-val Loss 0.59164
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57368
+val Acc 0.97 IoU 0.88
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 44/100
-train Loss 0.58437
-train Acc 0.25 IoU 0.25
+train Loss 0.56507
+train Acc 0.98 IoU 0.90
 ----------
-val Loss 0.59098
-val Acc 0.27 IoU 0.27
+val Loss 0.57539
+val Acc 0.96 IoU 0.88
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 45/100
-train Loss 0.58434
-train Acc 0.25 IoU 0.25
+train Loss 0.56481
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59032
-val Acc 0.27 IoU 0.27
+val Loss 0.57401
+val Acc 0.97 IoU 0.88
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 46/100
-train Loss 0.58431
-train Acc 0.25 IoU 0.25
+train Loss 0.56485
+train Acc 0.98 IoU 0.90
 ----------
-val Loss 0.59141
-val Acc 0.27 IoU 0.27
+val Loss 0.57231
+val Acc 0.97 IoU 0.89
+Achieved best result! save checkpoint.
+val Loss 0.57231
+val Acc 0.97 IoU 0.89
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 47/100
-train Loss 0.58426
-train Acc 0.25 IoU 0.25
+train Loss 0.56443
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59105
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
-------------------------------
-Epoch 48/100
-train Loss 0.58423
-train Acc 0.25 IoU 0.25
-----------
-val Loss 0.59103
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
-------------------------------
-Epoch 49/100
-train Loss 0.58421
-train Acc 0.25 IoU 0.25
-----------
-val Loss 0.58985
-val Acc 0.27 IoU 0.27
+val Loss 0.57200
+val Acc 0.97 IoU 0.89
+Achieved best result! save checkpoint.
+val Loss 0.57200
+val Acc 0.97 IoU 0.89
 One Epoch Complete in 0m 57s
 ------------------------------
-Epoch 50/100
-train Loss 0.58440
-train Acc 0.25 IoU 0.25
+Epoch 48/100
+train Loss 0.56432
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59089
-val Acc 0.27 IoU 0.27
+val Loss 0.57224
+val Acc 0.97 IoU 0.89
+Achieved best result! save checkpoint.
+val Loss 0.57224
+val Acc 0.97 IoU 0.89
+One Epoch Complete in 0m 57s
+------------------------------
+Epoch 49/100
+train Loss 0.56407
+train Acc 0.98 IoU 0.91
+----------
+val Loss 0.57304
+val Acc 0.97 IoU 0.89
+One Epoch Complete in 0m 56s
+------------------------------
+Epoch 50/100
+train Loss 0.56346
+train Acc 0.98 IoU 0.91
+----------
+val Loss 0.57211
+val Acc 0.97 IoU 0.89
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 51/100
-train Loss 0.58434
-train Acc 0.25 IoU 0.25
+train Loss 0.56380
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59160
-val Acc 0.27 IoU 0.27
+val Loss 0.57096
+val Acc 0.97 IoU 0.90
+Achieved best result! save checkpoint.
+val Loss 0.57096
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 52/100
-train Loss 0.58510
-train Acc 0.25 IoU 0.25
+train Loss 0.56335
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59119
-val Acc 0.27 IoU 0.27
+val Loss 0.57458
+val Acc 0.97 IoU 0.89
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 53/100
-train Loss 0.58434
-train Acc 0.25 IoU 0.25
+train Loss 0.56331
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59026
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57082
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 54/100
-train Loss 0.58421
-train Acc 0.25 IoU 0.25
+train Loss 0.56304
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59038
-val Acc 0.27 IoU 0.27
+val Loss 0.57048
+val Acc 0.97 IoU 0.90
+Achieved best result! save checkpoint.
+val Loss 0.57048
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 55/100
-train Loss 0.58445
-train Acc 0.25 IoU 0.25
+train Loss 0.56292
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59016
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57139
+val Acc 0.97 IoU 0.89
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 56/100
-train Loss 0.58468
-train Acc 0.25 IoU 0.25
+train Loss 0.56286
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59095
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56995
+val Acc 0.97 IoU 0.90
+Achieved best result! save checkpoint.
+val Loss 0.56995
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 57/100
-train Loss 0.58438
-train Acc 0.25 IoU 0.25
+train Loss 0.56268
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59156
-val Acc 0.27 IoU 0.27
+val Loss 0.57464
+val Acc 0.96 IoU 0.88
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 58/100
-train Loss 0.58455
-train Acc 0.25 IoU 0.25
+train Loss 0.56248
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59055
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
-------------------------------
-Epoch 59/100
-train Loss 0.58436
-train Acc 0.25 IoU 0.25
-----------
-val Loss 0.59116
-val Acc 0.27 IoU 0.27
+val Loss 0.57283
+val Acc 0.97 IoU 0.89
 One Epoch Complete in 0m 57s
 ------------------------------
-Epoch 60/100
-train Loss 0.58446
-train Acc 0.25 IoU 0.25
+Epoch 59/100
+train Loss 0.56231
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59139
-val Acc 0.27 IoU 0.27
+val Loss 0.56818
+val Acc 0.97 IoU 0.91
+Achieved best result! save checkpoint.
+val Loss 0.56818
+val Acc 0.97 IoU 0.91
 One Epoch Complete in 0m 56s
 ------------------------------
-Epoch 61/100
-train Loss 0.58429
-train Acc 0.25 IoU 0.25
+Epoch 60/100
+train Loss 0.56194
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59155
-val Acc 0.27 IoU 0.27
+val Loss 0.57064
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
+------------------------------
+Epoch 61/100
+train Loss 0.56219
+train Acc 0.98 IoU 0.91
+----------
+val Loss 0.56934
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 62/100
-train Loss 0.58434
-train Acc 0.25 IoU 0.25
+train Loss 0.56224
+train Acc 0.98 IoU 0.91
 ----------
-val Loss 0.59012
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.57100
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 63/100
-train Loss 0.58409
-train Acc 0.25 IoU 0.25
+train Loss 0.56191
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59030
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56982
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 64/100
-train Loss 0.58466
-train Acc 0.25 IoU 0.25
+train Loss 0.56168
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59020
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 0.56879
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 65/100
-train Loss 0.58471
-train Acc 0.25 IoU 0.25
+train Loss 0.56126
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59150
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 0.56884
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 66/100
-train Loss 0.58416
-train Acc 0.25 IoU 0.25
+train Loss 0.56121
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59058
-val Acc 0.27 IoU 0.27
+val Loss 0.56914
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 67/100
-train Loss 0.58396
-train Acc 0.25 IoU 0.25
+train Loss 0.56107
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59063
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56868
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 68/100
-train Loss 0.58409
-train Acc 0.25 IoU 0.25
+train Loss 0.56103
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59029
-val Acc 0.27 IoU 0.27
+val Loss 0.56865
+val Acc 0.97 IoU 0.91
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 69/100
-train Loss 0.58423
-train Acc 0.25 IoU 0.25
+train Loss 0.56114
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.58985
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56862
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 70/100
-train Loss 0.58414
-train Acc 0.25 IoU 0.25
+train Loss 0.56110
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59075
-val Acc 0.27 IoU 0.27
+val Loss 0.56931
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 71/100
-train Loss 0.58436
-train Acc 0.25 IoU 0.25
+train Loss 0.56108
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59002
-val Acc 0.27 IoU 0.27
+val Loss 0.56940
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 72/100
-train Loss 0.58434
-train Acc 0.25 IoU 0.25
+train Loss 0.56110
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59081
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56922
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 73/100
-train Loss 0.58441
-train Acc 0.25 IoU 0.25
+train Loss 0.56114
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59157
-val Acc 0.27 IoU 0.27
+val Loss 0.56908
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 74/100
-train Loss 0.58455
-train Acc 0.25 IoU 0.25
+train Loss 0.56097
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.58980
-val Acc 0.27 IoU 0.27
+val Loss 0.56883
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 75/100
-train Loss 0.58424
-train Acc 0.25 IoU 0.25
+train Loss 0.56108
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59154
-val Acc 0.27 IoU 0.27
+val Loss 0.56885
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 76/100
-train Loss 0.58416
-train Acc 0.25 IoU 0.25
+train Loss 0.56114
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59038
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56881
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 77/100
-train Loss 0.58421
-train Acc 0.25 IoU 0.25
+train Loss 0.56094
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59061
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56874
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 78/100
-train Loss 0.58429
-train Acc 0.25 IoU 0.25
+train Loss 0.56105
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59038
-val Acc 0.27 IoU 0.27
+val Loss 0.56902
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 79/100
-train Loss 0.58436
-train Acc 0.25 IoU 0.25
+train Loss 0.56115
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59014
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
-------------------------------
-Epoch 80/100
-train Loss 0.58478
-train Acc 0.25 IoU 0.25
-----------
-val Loss 0.59007
-val Acc 0.27 IoU 0.27
+val Loss 0.56920
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
-Epoch 81/100
-train Loss 0.58426
-train Acc 0.25 IoU 0.25
+Epoch 80/100
+train Loss 0.56109
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59110
-val Acc 0.27 IoU 0.27
+val Loss 0.56878
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
+------------------------------
+Epoch 81/100
+train Loss 0.56117
+train Acc 0.98 IoU 0.92
+----------
+val Loss 0.56874
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 82/100
-train Loss 0.58414
-train Acc 0.25 IoU 0.25
+train Loss 0.56114
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59029
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56881
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 58s
 ------------------------------
 Epoch 83/100
-train Loss 0.58395
-train Acc 0.25 IoU 0.25
+train Loss 0.56094
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59090
-val Acc 0.27 IoU 0.27
+val Loss 0.56908
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 84/100
-train Loss 0.58429
-train Acc 0.25 IoU 0.25
+train Loss 0.56106
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59167
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56924
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 58s
 ------------------------------
 Epoch 85/100
-train Loss 0.58486
-train Acc 0.25 IoU 0.25
+train Loss 0.56109
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59007
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56897
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 86/100
-train Loss 0.58432
-train Acc 0.25 IoU 0.25
+train Loss 0.56104
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59114
-val Acc 0.27 IoU 0.27
+val Loss 0.56880
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 87/100
-train Loss 0.58460
-train Acc 0.25 IoU 0.25
+train Loss 0.56111
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.58941
-val Acc 0.27 IoU 0.27
+val Loss 0.56890
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 88/100
-train Loss 0.58436
-train Acc 0.25 IoU 0.25
+train Loss 0.56123
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59054
-val Acc 0.27 IoU 0.27
+val Loss 0.56906
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 89/100
-train Loss 0.58454
-train Acc 0.25 IoU 0.25
+train Loss 0.56102
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.58976
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56878
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 90/100
-train Loss 0.58448
-train Acc 0.25 IoU 0.25
+train Loss 0.56109
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59164
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56913
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 91/100
-train Loss 0.58448
-train Acc 0.25 IoU 0.25
+train Loss 0.56103
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59121
-val Acc 0.27 IoU 0.27
+val Loss 0.56906
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 92/100
-train Loss 0.58428
-train Acc 0.25 IoU 0.25
+train Loss 0.56106
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59058
-val Acc 0.27 IoU 0.27
+val Loss 0.56893
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 93/100
-train Loss 0.58447
-train Acc 0.25 IoU 0.25
+train Loss 0.56109
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59142
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56919
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 94/100
-train Loss 0.58424
-train Acc 0.25 IoU 0.25
+train Loss 0.56108
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59037
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56909
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 95/100
-train Loss 0.58430
-train Acc 0.25 IoU 0.25
+train Loss 0.56108
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59157
-val Acc 0.27 IoU 0.27
+val Loss 0.56896
+val Acc 0.97 IoU 0.90
 One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 96/100
-train Loss 0.58437
-train Acc 0.25 IoU 0.25
+train Loss 0.56105
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59006
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 0.56889
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 58s
 ------------------------------
 Epoch 97/100
-train Loss 0.58455
-train Acc 0.25 IoU 0.25
+train Loss 0.56116
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59154
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 56s
+val Loss 0.56898
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 57s
 ------------------------------
 Epoch 98/100
-train Loss 0.58432
-train Acc 0.25 IoU 0.25
+train Loss 0.56108
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59012
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 0.56908
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 58s
 ------------------------------
 Epoch 99/100
-train Loss 0.58413
-train Acc 0.25 IoU 0.25
+train Loss 0.56109
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59041
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
+val Loss 0.56892
+val Acc 0.97 IoU 0.90
+One Epoch Complete in 0m 56s
 ------------------------------
 Epoch 100/100
-train Loss 0.58443
-train Acc 0.25 IoU 0.25
+train Loss 0.56128
+train Acc 0.98 IoU 0.92
 ----------
-val Loss 0.59120
-val Acc 0.27 IoU 0.27
-One Epoch Complete in 0m 57s
-Total Training time 93min 40sec
-Test Loss 0.69859
-Test Acc 0.56 IoU 0.37
+val Loss 0.56867
+val Acc 0.97 IoU 0.91
+One Epoch Complete in 0m 56s
+Total Training time 94min 33sec
+Test Loss 0.56818
+Test Acc 0.97 IoU 0.91

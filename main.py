@@ -14,7 +14,7 @@ from train import train, eval
 
 
 def main(args, device):
-    model = UNet(n_channels=1, n_classes=1, device=device)
+    model = UNet(n_channels=1 if args.aug_method != "channel_wise" else 3, n_classes=1, device=device)
 
     """load checkpoint pt"""
     start_epoch = 0
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch_size', type=int, default=12)
     parser.add_argument('--lr', type=float, default=0.1)
 
-    parser.add_argument('--aug_method', type=str, default='gamma', choices=['gamma', 'no_gamma'])
+    parser.add_argument('--aug_method', type=str, default='channel_wise', choices=['gamma', 'no_gamma', 'channel_wise'])
     parser.add_argument('--criterion', type=str, default='dice', choices=['BCE', 'dice'])
 
     parser.add_argument('--load_model', type=str, default=None, help='.pth file path to load model')

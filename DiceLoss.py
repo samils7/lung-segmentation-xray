@@ -23,6 +23,7 @@ class BinaryDiceLoss(nn.Module):
 
     def forward(self, predict, target):
         assert predict.shape[0] == target.shape[0], "predict & target batch size don't match"
+        predict = nn.Sigmoid()(predict)
         predict = predict.contiguous().view(predict.shape[0], -1)
         target = target.contiguous().view(target.shape[0], -1)
 

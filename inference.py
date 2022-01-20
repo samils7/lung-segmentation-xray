@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
             path = f"{base}/{ciriterion}/{augmentation}/best_checkpoint.pt"
             checkpoint = torch.load(path, map_location=device)
-            model = UNet(n_channels=1, n_classes=1, device=device)
+            model = UNet(n_channels=1 if augmentation != "channel_wise" else 3, n_classes=1, device=device)
             model.load_state_dict(checkpoint['model_state_dict'])
 
             images = []

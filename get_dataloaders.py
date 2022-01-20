@@ -1,5 +1,5 @@
 import torchvision.transforms as transforms
-from custom_transforms import GrayScale, Resize, ToTensor, histogram_equalize, gamma_correction
+from custom_transforms import GrayScale, Resize, ToTensor, histogram_equalize, gamma_correction, channel_wise
 from lungsegdatasets import chn_dataset, mcu_dataset
 from torch.utils.data import DataLoader
 
@@ -19,6 +19,13 @@ def get_dataloaders(args):
         custom_transforms = transforms.Compose([
             GrayScale(),
             Resize(img_size),
+            ToTensor(),
+        ])
+    elif args.aug_method == "channel_wise":
+        custom_transforms = transforms.Compose([
+            GrayScale(),
+            Resize(img_size),
+            channel_wise(0.5),
             ToTensor(),
         ])
     else:

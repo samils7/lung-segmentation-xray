@@ -30,6 +30,20 @@ class gamma_correction(object):
         return sample
 
 
+class channel_wise(object):
+    def __init__(self, gamma):
+        assert isinstance(gamma, (int, float))
+        self.gamma_correction = gamma_correction(gamma)
+
+    def __call__(self, sample):
+        im_0 = np.array(sample['image'])
+        im_1 = histogram_equalize()(sample)['image']
+        im_2 = self.gamma_correction(sample)['image']
+        sample['image'] = np.stack((im_0, im_1, im_2), -1)
+
+        return sample
+
+
 class Resize(object):
     """
     Resize the input PIL Image to the given size.
